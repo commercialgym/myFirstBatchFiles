@@ -29,7 +29,9 @@ echo 3. Open in Notepad++
 echo 4. Print
 REM --------------------------------------------------------------
 REM Run C file to get the user's choice
-"C:\tmp\myChoice\x64\Debug\myChoice.exe"
+REM Old code >> "C:\tmp\myChoice\x64\Debug\myChoice.exe" 
+REM since only the executable is submitted, the proper way to call would be
+"myChoice.exe"
 REM --------------------------------------------------------------
 REM Check return value from myChoice.exe
 set userInput=%ERRORLEVEL%

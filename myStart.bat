@@ -6,11 +6,11 @@ REM * FIRST VERSION : 04-13-2024
 REM * DESCRIPTION : This batch file creates a directory called myTemp and changes
 REM   directories into it, then launches visual studio
 
-REM not specified in requirements but could check for the existence of C:\myTemp to
-REM to skip to cd /d C:\myTemp to avoid the console from saying that the directory exists
-REM --------------------------------------------------------------
-REM Create directory
- mkdir "C:\myTemp"
+REM Check for the existence of C:\myTemp and create it if it doesn't exist
+IF NOT EXIST "C:\myTemp" (
+    REM Create directory
+    mkdir "C:\myTemp"
+)
 REM --------------------------------------------------------------
 REM /d ensures it will move into this folder even if current directory is on different drive
  cd /d "C:\myTemp"
